@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
+import {setUrl} from './index';
 import Sally from './Sally.jsx';
 import Work from './clothes/Work.jsx';
 import Dress from './clothes/Dress.jsx';
@@ -8,24 +9,25 @@ import Pajamas from './clothes/Pajamas.jsx';
 
 export const App = () => {
   const [url, setURL] = useState(window.location.href);
+  //let displayURL = setUrl();
 
-  // useEffect(() => {
-  //   setURL(window.location.href);
-  // }, [])
-
+  useEffect(() => {
+    console.log('hi')
+  }, [url])
+  
   return (
     <Router>
-      <h1>Sally the SPA</h1>
+  
       <span>URL: {url}</span>
       <nav>
-        <Link to='/work'>
-          <button onClick={() => setURL(window.location.href)}>Work</button>
+        <Link to='/work' onClick={() => setURL(setUrl())}>
+          <button >Work</button>
         </Link>
         <Link to='/datenight'>
-          <button onClick={() => setURL(window.location.href)}>Date Night</button>
+          <button onClick={() => setURL(setUrl())}>Date Night</button>
         </Link>
         <Link to='/bedtime'>
-          <button onClick={() => setURL(window.location.href)}>Bedtime</button>
+          <button onClick={() => setURL(setUrl())}>Bedtime</button>
         </Link>
       </nav>
       <Sally/>
@@ -47,3 +49,5 @@ export const App = () => {
 };
 
 export default App;
+
+// 

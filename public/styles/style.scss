@@ -1,0 +1,73 @@
+@import './_fonts.scss';
+
+body {
+  background-color: #bde1bd;
+  text-align: center;
+  font-family: 'Chelsea Market';
+}
+
+h1 {
+  font-size: 36px;
+}
+
+nav {
+  margin-top: 10px;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  font-family: 'Love Ya Like A Sister';
+  margin: 5px 10px 0px;
+  height: 28px;
+  width: 150px;
+  font-size: 18px;
+  border: 1px solid #9FB8AD;
+  border-radius: 15px;
+  transition: ease .5s;
+  cursor: pointer;
+}
+
+button:hover{
+  border: 1px solid #557174;//rgb(97, 94, 94);
+  box-shadow: 1px 1px 3px #7C9473;
+}
+
+button:focus{
+  outline: none;
+}
+
+
+#sally {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin: 20px 0px;
+}
+
+#dress {
+  position: absolute;
+  left: 300px;
+  top: 285px;
+  height: 450px;
+  z-index: 10;
+}
+
+#pajamas {
+  position: absolute;
+  left: 200px;
+  top: 275px;
+  height: 600px;
+  z-index: 10;
+}
+
+#work {
+  position: absolute;
+  left: 280px;
+  top: 200px;
+  height: 650px;
+  z-index: 10;
+}
