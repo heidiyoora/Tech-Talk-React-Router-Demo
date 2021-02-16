@@ -8,28 +8,23 @@ import Dress from './clothes/Dress.jsx';
 import Pajamas from './clothes/Pajamas.jsx';
 
 export const App = () => {
-  const [url, setURL] = useState(window.location.href);
-  //let displayURL = setUrl();
-
-  useEffect(() => {
-    console.log('hi')
-  }, [url])
   
   return (
+    
     <Router>
-  
-      <span>URL: {url}</span>
+
       <nav>
-        <Link to='/work' onClick={() => setURL(setUrl())}>
-          <button >Work</button>
+        <Link to='/work'>
+          <button> Work </button>
         </Link>
         <Link to='/datenight'>
-          <button onClick={() => setURL(setUrl())}>Date Night</button>
+          <button> Date Night </button>
         </Link>
         <Link to='/bedtime'>
-          <button onClick={() => setURL(setUrl())}>Bedtime</button>
+          <button> Bedtime </button>
         </Link>
       </nav>
+
       <Sally/>
 
 
@@ -50,4 +45,3 @@ export const App = () => {
 
 export default App;
 
-// 
