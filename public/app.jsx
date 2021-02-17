@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
-import {setUrl} from './index';
 import Sally from './Sally.jsx';
 import Work from './clothes/Work.jsx';
 import Dress from './clothes/Dress.jsx';
@@ -23,21 +22,32 @@ export const App = () => {
         <Link to='/bedtime'>
           <button> Bedtime </button>
         </Link>
+        <Link to='/'>
+          <button> Reset </button>
+        </Link>
       </nav>
 
       <Sally/>
 
 
       <Switch>
+
         <Route path='/bedtime'>
           <Pajamas />
         </Route>
+
         <Route path='/work'>
           <Work />
         </Route>
+
         <Route path='/datenight'>
           <Dress />
         </Route>
+
+        <Route path='/'>
+          <h3> Help me get ready for the day! </h3>
+        </Route>
+
       </Switch>
     </Router>
   )
@@ -45,3 +55,7 @@ export const App = () => {
 
 export default App;
 
+
+        // <Route exact path='/'>
+        //   <h3> Help me get ready for the day! </h3>
+        // </Route>

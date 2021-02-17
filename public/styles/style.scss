@@ -38,6 +38,12 @@ button:focus{
   outline: none;
 }
 
+h3 {
+  position: absolute;
+  z-index: 1000;
+  top: 400px;
+}
+
 
 #sally {
   position: relative;
