@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import {BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 
 import Sally from './Sally.jsx';
 import Work from './clothes/Work.jsx';
@@ -10,7 +10,7 @@ export const App = () => {
   
   return (
     
-    <Router>
+    <BrowserRouter>
 
       <nav>
         <Link to='/work'>
@@ -49,7 +49,7 @@ export const App = () => {
         </Route>
 
       </Switch>
-    </Router>
+    </BrowserRouter>
   )
 };
 
