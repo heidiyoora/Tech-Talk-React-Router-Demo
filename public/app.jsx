@@ -6,12 +6,16 @@ import Work from './clothes/Work.jsx';
 import Dress from './clothes/Dress.jsx';
 import Pajamas from './clothes/Pajamas.jsx';
 
-export const App = () => {
+
+
+const App = () => {
   
   return (
     
+    // 1st category: Router
     <BrowserRouter>
 
+    {/* 3rd Category: Navigation/Route Changers */}
       <nav>
         <Link to='/work'>
           <button> Work </button>
@@ -29,12 +33,8 @@ export const App = () => {
 
       <Sally/>
 
-
+    {/* 2nd Category: Route Matchers */}
       <Switch>
-
-        <Route path='/bedtime'>
-          <Pajamas />
-        </Route>
 
         <Route path='/work'>
           <Work />
@@ -44,18 +44,21 @@ export const App = () => {
           <Dress />
         </Route>
 
+        <Route path='/bedtime'>
+          <Pajamas />
+        </Route>
+
         <Route path='/'>
           <h3> Help me get ready for the day! </h3>
         </Route>
 
       </Switch>
+
     </BrowserRouter>
   )
 };
 
+
+
+
 export default App;
-
-
-        // <Route exact path='/'>
-        //   <h3> Help me get ready for the day! </h3>
-        // </Route>
