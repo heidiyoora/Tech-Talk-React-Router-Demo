@@ -1,5 +1,6 @@
 # Tech-Talk: React Router
 
+![Splash Image](./public/assets/sallyheadshot.png)
 ## Meet Sally
 She is an SPA or Single Page Application. 
 To help you understand, imagine that an SPA is like the human body. Depending on the time of day or the event you need to attend, you change your clothes accordingly but your body still remains the same.
